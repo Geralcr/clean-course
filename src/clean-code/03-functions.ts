@@ -1,17 +1,14 @@
 ;(() => {
-  // función para obtener información de una película por Id
-  function getInfoMovieById(movieId: string) {
-    console.log({ movieId })
+  function getMovieById(id: string) {
+    console.log({ id })
   }
 
-  // función para obtener información de los actores de una película - Actors o Cast // id = movieId getMovieCast
-  function getInfoMovieOfActors(movieId: string) {
-    console.log({ movieId })
+  function getMovieActorsById(id: string) {
+    console.log({ id })
   }
 
-  // funcion para obtener el bio del actor por el id
-  function getyActorBiograph(ActorId: string) {
-    console.log({ ActorId })
+  function getyActorBiographyById(id: string) {
+    console.log({ id })
   }
 
   interface Movie {
@@ -26,14 +23,20 @@
   function createMovie(infoMovie: Movie) {
     console.log(infoMovie.title, infoMovie.description, infoMovie.rating, infoMovie.cast)
   }
+  createMovie(infoMovie)
 
   interface Actor {
     fullName: string
     birthdate: Date
   }
   // Crea un nuevo actor
-  let infoActor: Actor = { fullName: '', birthdate: new Date() }
+  //datos iniciales declaro e inicializo
+  let infoActor1: Actor = { fullName: '', birthdate: new Date() }
   function createActor(infoActor: Actor): boolean {
+    //si lo destructuro no uso infoActor.fullName
+    const { fullName, birthdate } = infoActor
+    //si no lo destructuro infoActor.fullName
+
     // tarea asincrona para verificar nombre
     // ..
     // ..
@@ -42,4 +45,5 @@
     console.log('Crear actor')
     return true
   }
+  createActor(infoActor1)
 })()
