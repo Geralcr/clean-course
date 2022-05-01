@@ -46,4 +46,18 @@
     return true
   }
   createActor(infoActor1)
+
+  //Continuación
+  interface Amount {
+    isDead: boolean
+    isSeparated: boolean
+    isRetired: boolean
+  }
+  const getPayAmount = (Amount: Amount) => {
+    if (Amount.isDead) return 1500
+
+    if (Amount.isSeparated) return 2500
+
+    return Amount.isRetired ? 3000 : 4000
+  }
 })()
