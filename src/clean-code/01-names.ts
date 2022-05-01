@@ -28,20 +28,20 @@
   const today = new Date()
 
   // días transcurridos - elapsed time in days
-  const elapsedTimeDays: number = 23
+  const elapsedTimeInDays: number = 23
 
   // número de archivos en un directorio - number of files in directory
-  const filesInDirectory: number = 33
+  const numberFilesInDirectory: number = 33
 
   // primer nombre - first name
-  const firstname: string = 'Geraldine'
+  const firstName: string = 'Geraldine'
 
   // primer apellido - last name
-  const lastname: string = 'Claros'
+  const lastName: string = 'Claros'
 
   // días desde la última modificación - days since modification
-  const daysSinceModification = 12
+  const daysSinceLastModification = 12
 
   // cantidad máxima de clases por estudiante - max classes per student
-  const maxClassStudent = 6
+  const maxClassPerStudent = 6
 })()
