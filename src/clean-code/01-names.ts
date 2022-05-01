@@ -22,26 +22,26 @@
   class User {}
   interface User {}
 
-  // Todo: Tarea
+  // ToDo: Tarea
 
   // día de hoy - today
-  const ddmmyyyy = new Date()
+  const today = new Date()
 
   // días transcurridos - elapsed time in days
-  const d: number = 23
+  const elapsedTimeDays: number = 23
 
   // número de archivos en un directorio - number of files in directory
-  const dir = 33
+  const filesInDirectory: number = 33
 
   // primer nombre - first name
-  const nombre = 'Fernando'
+  const firstname: string = 'Geraldine'
 
   // primer apellido - last name
-  const apellido = 'Herrera'
+  const lastname: string = 'Claros'
 
   // días desde la última modificación - days since modification
-  const dsm = 12
+  const daysSinceModification = 12
 
   // cantidad máxima de clases por estudiante - max classes per student
-  const max = 6
+  const maxClassStudent = 6
 })()
