@@ -3,7 +3,8 @@ import './style.css'
 // import './clean-code/05-dry'
 // import './clean-code/06-class-a'
 // import './clean-code/06-class-b'
-import './clean-code/06-class-c'
+// import './clean-code/06-class-c'
+import './clean-code/07-homework'
 
 const app = document.querySelector<HTMLDivElement>('#app')!
 

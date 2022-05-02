@@ -8,26 +8,41 @@
     constructor(public id: string, public type: HtmlType) {}
   }
 
-  class InputAttributes extends HtmlElement {
-    constructor(public value: string, public placeholder: string, id: string) {
-      super(id, 'input')
-    }
+  class InputAttributes {
+    constructor(public value: string, public placeholder: string) {}
   }
 
-  class InputEvents extends InputAttributes {
-    constructor(value: string, placeholder: string, id: string) {
-      super(value, placeholder, id)
+  class InputEvents {
+    setFocus() {
+      return 'setFocus'
     }
-
-    setFocus() {}
-    getValue() {}
-    isActive() {}
-    removeValue() {}
+    getValue() {
+      return 'getValue'
+    }
+    isActive() {
+      return 'isActive'
+    }
+    removeValue() {
+      return 'removeValue'
+    }
   }
 
   //? Idea para la nueva clase InputElement
 
-  const nameField = new InputEvents('Fernando', 'Enter first name', 'txtName')
+  class InputElement {
+    constructor(
+      public HTMLInputElement: HtmlElement,
+      public inputAttributes: InputAttributes,
+      public inputEvents: InputEvents
+    ) {}
+  }
+
+  const nameField = new InputElement(
+    new HtmlElement('123', 'input'),
+    new InputAttributes('1', 'text'),
+    new InputEvents()
+  )
 
   console.log({ nameField })
+  console.log(nameField.inputEvents.isActive)
 })()
