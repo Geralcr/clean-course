@@ -30,19 +30,18 @@
   //? Idea para la nueva clase InputElement
 
   class InputElement {
-    constructor(
-      public HTMLInputElement: HtmlElement,
-      public inputAttributes: InputAttributes,
-      public inputEvents: InputEvents
-    ) {}
+    public HTMLInputElement: HtmlElement
+    public inputAttributes: InputAttributes
+    public inputEvents: InputEvents
+    constructor(value: string, placeholder: string, id: string) {
+      this.HTMLInputElement = new HtmlElement(id, 'input')
+      this.inputAttributes = new InputAttributes(value, placeholder)
+      this.inputEvents = new InputEvents()
+    }
   }
 
-  const nameField = new InputElement(
-    new HtmlElement('123', 'input'),
-    new InputAttributes('1', 'text'),
-    new InputEvents()
-  )
+  const nameField = new InputElement('1', 'text', '123')
 
   console.log({ nameField })
-  console.log(nameField.inputEvents.isActive)
+  console.log(nameField.inputEvents.isActive())
 })()
