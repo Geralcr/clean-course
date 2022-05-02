@@ -18,4 +18,4 @@ npm run dev
 ```
 
 ## Notion
-https://heavy-nurse-e7b.notion.site/Section-3-Clean-Code-Clases-y-Comentarios-44f56b8299d4459293e2ecf23e5cc521
+https://heavy-nurse-e7b.notion.site/Principios-SOLID-TypeScript-07d09aff903a460f9a52c7338c357f08
