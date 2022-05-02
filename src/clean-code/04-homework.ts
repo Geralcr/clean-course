@@ -2,8 +2,8 @@
   // Resolver sin la triple condicional dentro del if
 
   function isRedFruit(fruit: string): boolean {
-    const nameFruits = ['manzana', 'cereza', 'ciruela']
-    return nameFruits.includes(fruit) ? true : false
+    const redFruits = ['manzana', 'cereza', 'ciruela']
+    return redFruits.includes(fruit)
 
     // if (fruit === 'manzana' || fruit === 'cereza' || fruit === 'ciruela') {
     //   return true
@@ -13,25 +13,36 @@
   }
 
   // Simplificar esta función
-
-  function getFruitsByColor(color: string): string[] {
+  type FruitColor = 'red' | 'yellow' | 'purple'
+  function getFruitsByColor(color: FruitColor): string[] {
     const colorFruits = {
-      red: 'red',
-      yellow: 'yellow',
-      purple: 'purple',
+      red: ['manzana', 'fresa'],
+      yellow: ['piña', 'banana'],
+      purple: ['moras', 'uvas'],
+    }
+    if (!Object.keys(colorFruits).includes(color)) {
+      throw Error('the color must be: red, yellow, purple')
     }
 
-    switch (color) {
-      case colorFruits.red:
-        return ['manzana', 'fresa']
-      case colorFruits.yellow:
-        return ['piña', 'banana']
-      case colorFruits.purple:
-        return ['moras', 'uvas']
-      default:
-        throw Error('the color must be: red, yellow, purple')
-    }
+    return colorFruits[color]
 
+    //geral
+    // const colorFruits = {
+    //   red: 'red',
+    //   yellow: 'yellow',
+    //   purple: 'purple',
+    // }
+    // switch (color) {
+    //   case colorFruits.red:
+    //     return ['manzana', 'fresa']
+    //   case colorFruits.yellow:
+    //     return ['piña', 'banana']
+    //   case colorFruits.purple:
+    //     return ['moras', 'uvas']
+    //   default:
+    //     throw Error('the color must be: red, yellow, purple')
+    // }
+    //code smell
     // if (color === 'red') {
     //   return ['manzana', 'fresa']
     // } else if (color === 'yellow') {
@@ -53,8 +64,9 @@
     if (!isFirstStepWorking) return 'First step broken.'
     if (!isSecondStepWorking) return 'Second step broken.'
     if (!isThirdStepWorking) return 'Third step broken.'
+    if (!isFourthStepWorking) return 'Fourth step broken.'
 
-    return isFourthStepWorking ? 'Working properly!' : 'Fourth step broken.'
+    return 'Working properly!'
 
     // if (isFirstStepWorking) {
     //   if (isSecondStepWorking) {
@@ -83,7 +95,7 @@
   console.log({ redFruits: getFruitsByColor('red') }) // ['manzana', 'fresa']
   console.log({ yellowFruits: getFruitsByColor('yellow') }) // ['piña', 'banana']
   console.log({ purpleFruits: getFruitsByColor('purple') }) // ['moras', 'uvas']
-  console.log({ pinkFruits: getFruitsByColor('pink') }) // Error: the color must be: red, yellow, purple
+  // console.log({ pinkFruits: getFruitsByColor('pink') }) // Error: the color must be: red, yellow, purple
 
   // workingSteps
   console.log({ workingSteps: workingSteps() }) // Cambiar los valores de la línea 31 y esperar los resultados
