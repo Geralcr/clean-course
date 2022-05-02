@@ -16,3 +16,6 @@ yarn dev
 ó
 npm run dev
 ```
+
+## Notion
+https://heavy-nurse-e7b.notion.site/Section-3-Clean-Code-Clases-y-Comentarios-44f56b8299d4459293e2ecf23e5cc521
